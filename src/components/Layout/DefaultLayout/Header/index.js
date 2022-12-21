@@ -9,9 +9,11 @@ import {
   faCircleXmark,
   faSpinner,
   faMagnifyingGlass,
+  faSignIn,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import AccountItem from "~/components/AccountItem";
+import Button from "~/components/Button";
 
 const cx = classNames.bind(styles);
 
@@ -36,10 +38,10 @@ function Header() {
             <div className={cx("search-result")} tabIndex="-1" {...attrs}>
               <PopperWrapper>
                 <h4 className={cx("search-title")}>account</h4>
-                <AccountItem/>
-                <AccountItem/>
-                <AccountItem/>
-                <AccountItem/>
+                <AccountItem />
+                <AccountItem />
+                <AccountItem />
+                <AccountItem />
               </PopperWrapper>
             </div>
           )}
@@ -56,7 +58,11 @@ function Header() {
             </button>
           </div>
         </Tippy>
-        <div className={cx("actions")}></div>
+        <div className={cx("actions")}>
+          <Button text>Upload</Button>
+          <Button primary leftIcon={<FontAwesomeIcon icon={faSignIn} />}>Log in</Button>
+       
+        </div>
       </div>
     </header>
   );
