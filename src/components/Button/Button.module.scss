@@ -55,7 +55,9 @@
 .icon + .title, .title + .icon{
     margin-left: 8px; 
 }
-
+.icon{
+    display: inline-block;
+}
 //----------------btn size-----------------------
 .smail{
     min-width: 88px;
